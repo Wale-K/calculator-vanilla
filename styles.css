@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.calculator {
+  align-content: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  -ms-grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(150px, auto) repeat(5, 100px);
+}
+
+button {
+  border: solid pink 1px;
+  background-color: cornflowerblue;
+  outline: none;
+  font-size: large;
+  font-weight: 900;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: orange;
+}
+
+.wide-button {
+  grid-column: span 2;
+}
+
+.screen {
+  grid-column: span 4;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  word-wrap: break-word;
+  word-break: break-all;
+
+}
+/* 
+.screen {
+  background-color: green;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.past-answer {
+  background-color: white;
+  height: 20px;
+  width: 200px;
+  
+  text-align: end;
+}
+
+.current-equation {
+  text-align: end;
+  
+
+}
+
+
+
+button {
+  width: 50px;
+  margin: 0px;
+}
+
+.wide-button {
+  width: 100px;
+  margin: 0px;
+} */
+
