@@ -5,11 +5,9 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="./styles.css" />
     <script type="text/javascript" src="./index.js" defer></script>
-    <!-- take out the defer in the above line? -->
   </head>
   <body>
     <div class="calculator">
-
       <div class="screen">
         <div id="answer" class="past-answer">0</div>
         <div id="equation" class="current-equation">0</div>
@@ -17,13 +15,11 @@
       <button class="wide-button" onclick="allClear()">AC</button>
       <button id="delete" onclick="handleDeleteOnClick()">DEL</button>
       <button id="divide" onclick="handleOperatorOnClick('/')">÷</button>
-      <!-- Instead of this "+" I'm using "/" -->
 
       <button id="seven" onclick="handleNumberOnClick('7')">7</button>
       <button id="eight" onclick="handleNumberOnClick('8')">8</button>
       <button id="nine" onclick="handleNumberOnClick('9')">9</button>
       <button id="times" onclick="handleOperatorOnClick('*')">×</button>
-<!-- Instead of this "×" I'm using "*" -->
 
       <button id="four" onclick="handleNumberOnClick('4')">4</button>
       <button id="five" onclick="handleNumberOnClick('5')">5</button>
@@ -35,12 +31,9 @@
       <button id="plus" onclick="handleOperatorOnClick('+')">+</button>
       <button id="zero" onclick="handleNumberOnClick('0')">0</button>
       <button id="decimal" onclick="handleNumberOnClick('.')">.</button>
-      <button id="equals" onclick="handleEqualsOnClick()" class="wide-button">=</button>
-      
-      
+      <button id="equals" onclick="handleEqualsOnClick()" class="wide-button">
+        =
+      </button>
     </div>
-
-    
   </body>
 </html>
-

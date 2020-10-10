@@ -56,16 +56,15 @@ const handleOperatorOnClick = (operator) => {
   renderEquationToPage();
 };
 
-function evaluate(obj) {
+const evaluate = (obj) => {
   return Function("return (" + obj + ")")();
   // return Function('return ("2 + 2")')();
-}
+};
 
 const handleEqualsOnClick = () => {
   let joint = evaluate(theEquation.join(""));
   document.getElementById("answer").innerHTML = joint;
   theEquation = [];
-
 };
 
 const allClear = () => {
@@ -76,6 +75,45 @@ const allClear = () => {
   renderAnswertoPage();
 };
 
+document.addEventListener("keydown", (event) => {
+  if (event.keyCode === 27) {
+    return allClear();
+  } else if (event.keyCode === 13) {
+    return handleEqualsOnClick();
+  } else if (event.keyCode === 8) {
+    return handleDeleteOnClick();
+  } else if (event.keyCode === 191) {
+    return handleOperatorOnClick("/");
+  } else if (event.keyCode === 88) {
+    return handleOperatorOnClick("*");
+  } else if (event.keyCode === 187) {
+    return handleOperatorOnClick("+");
+  } else if (event.keyCode === 189) {
+    return handleOperatorOnClick("-");
+  } else if (event.keyCode === 48) {
+    return handleNumberOnClick("0");
+  } else if (event.keyCode === 49) {
+    return handleNumberOnClick("1");
+  } else if (event.keyCode === 50) {
+    return handleNumberOnClick("2");
+  } else if (event.keyCode === 51) {
+    return handleNumberOnClick("3");
+  } else if (event.keyCode === 52) {
+    return handleNumberOnClick("4");
+  } else if (event.keyCode === 53) {
+    return handleNumberOnClick("5");
+  } else if (event.keyCode === 54) {
+    return handleNumberOnClick("6");
+  } else if (event.keyCode === 55) {
+    return handleNumberOnClick("7");
+  } else if (event.keyCode === 56) {
+    return handleNumberOnClick("8");
+  } else if (event.keyCode === 57) {
+    return handleNumberOnClick("9");
+  } else if (event.keyCode === 190) {
+    return handleNumberOnClick(".");
+  }
+});
 
 // changed the operator buttons so they now get pushed to the equation array.
 // added the clearZero function. So now the zero disappears.
